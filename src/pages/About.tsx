@@ -5,7 +5,8 @@ import { NavLink } from "react-router-dom";
 
 const About = () => {
   const experience = [
-    { year: "2024-Present", title: "Founder", company: "Bude Global Enterprise" },
+    { year: "2025-Present", title: "Business Analyst", company: "Xmplar Management Solutions Pvt. Ltd." },
+    { year: "2024-Present", title: "Innovating for the Future (Co-Founder)", company: "Bude Global Enterprise" },
     { year: "2023-2024", title: "ERP Functional Consultant", company: "Frutter Software Labs" },
     { year: "2021-2023", title: "Freelancer", company: "Business Branding & Designing" },
   ];
@@ -16,8 +17,6 @@ const About = () => {
     "ERP Implementation",
     "Business Consulting",
     "Figma",
-    "React",
-    "TypeScript",
     "ERPNext",
     "Odoo",
     "Frappe Framework",
