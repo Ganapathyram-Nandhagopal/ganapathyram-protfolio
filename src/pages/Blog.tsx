@@ -8,8 +8,30 @@ import Footer from "@/components/Footer";
 import blogInventoryMismatch from "@/assets/blog-inventory-mismatch.png";
 import blogDelayedApprovals from "@/assets/blog-delayed-approvals.png";
 import blogManualSales from "@/assets/blog-manual-sales.png";
+import blogCrmLeadTraceability from "@/assets/blog-crm-lead-traceability.png";
+import blogProductionPlanning from "@/assets/blog-production-planning.png";
 
 const blogPosts = [
+  {
+    id: 10,
+    slug: "losing-leads-crm-full-lead-traceability",
+    title: "Losing Leads Every Week? CRM Brings Full Lead Traceability",
+    excerpt: "Most companies lose 20% to 45% of leads every month simply because they are not tracked properly. Discover how CRM provides end-to-end lead traceability.",
+    category: "ERP & Business",
+    date: "Apr 02, 2025",
+    readTime: "10 min read",
+    image: blogCrmLeadTraceability,
+  },
+  {
+    id: 11,
+    slug: "inaccurate-production-planning-erp-manufacturing-bottlenecks",
+    title: "Inaccurate Production Planning — How ERP Solves Manufacturing Bottlenecks",
+    excerpt: "Manufacturing businesses lose massive revenue every year because products are not produced on time. Learn how ERP eliminates production bottlenecks.",
+    category: "ERP & Business",
+    date: "Apr 05, 2025",
+    readTime: "11 min read",
+    image: blogProductionPlanning,
+  },
   {
     id: 7,
     slug: "inventory-mismatch-stock-losses-erp-stock-accuracy",
