@@ -12,9 +12,31 @@ import Footer from "@/components/Footer";
 import blogInventoryMismatch from "@/assets/blog-inventory-mismatch.png";
 import blogDelayedApprovals from "@/assets/blog-delayed-approvals.png";
 import blogManualSales from "@/assets/blog-manual-sales.png";
+import blogCrmLeadTraceability from "@/assets/blog-crm-lead-traceability.png";
+import blogProductionPlanning from "@/assets/blog-production-planning.png";
 import signature from "@/assets/signature.png";
 
 const blogPostsData = [
+  {
+    id: "10",
+    slug: "losing-leads-crm-full-lead-traceability",
+    title: "Losing Leads Every Week? CRM Brings Full Lead Traceability",
+    category: "ERP & Business",
+    date: "Apr 02, 2025",
+    readTime: "10 min read",
+    image: blogCrmLeadTraceability,
+    content: "Every business claims 'we get enough leads', yet struggles with low conversion and inconsistent follow-ups. The shocking reality is — most companies lose 20% to 45% of leads every month simply because they are not tracked properly."
+  },
+  {
+    id: "11",
+    slug: "inaccurate-production-planning-erp-manufacturing-bottlenecks",
+    title: "Inaccurate Production Planning — How ERP Solves Manufacturing Bottlenecks",
+    category: "ERP & Business",
+    date: "Apr 05, 2025",
+    readTime: "11 min read",
+    image: blogProductionPlanning,
+    content: "Manufacturing businesses lose massive revenue every year because products are not produced on time, in correct quantity, or with accurate material availability. The primary reason behind this? Manual production planning."
+  },
   {
     id: "7",
     slug: "inventory-mismatch-stock-losses-erp-stock-accuracy",
@@ -1163,6 +1185,369 @@ const BlogPost = () => {
                     <li>✔ Boosting salesperson productivity</li>
                   </ul>
                   <p>That's why companies using CRM report 40% higher conversion rates and far better customer experience.</p>
+                </>
+              ) : currentPost.slug === "losing-leads-crm-full-lead-traceability" ? (
+                <>
+                  <p>Think about this 👇</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>enquiry received</li>
+                    <li>sales team busy</li>
+                    <li>follow-up missed</li>
+                    <li>customer goes silent</li>
+                    <li>lost forever</li>
+                  </ul>
+
+                  <p>This happens mainly because businesses run sales using:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>Excel</li>
+                    <li>spreadsheets</li>
+                    <li>WhatsApp notes</li>
+                    <li>business cards</li>
+                    <li>phone call memory</li>
+                  </ul>
+                  <p className="font-semibold">This is not sales pipeline management — this is chaos.</p>
+                  <p>This is where CRM gives complete lead traceability.</p>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">❗ What Actually Causes Lead Loss?</h2>
+                  
+                  <h3 className="font-sans text-2xl font-bold mt-8">1. No centralized record of incoming leads</h3>
+                  <p>Leads come from multiple channels:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>website</li>
+                    <li>WhatsApp</li>
+                    <li>phone calls</li>
+                    <li>LinkedIn</li>
+                    <li>referrals</li>
+                    <li>exhibitions</li>
+                    <li>walk-in</li>
+                  </ul>
+                  <p>Without CRM, leads get scattered and forgotten.</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">2. No responsible owner</h3>
+                  <p>A lead comes → no one knows who should follow up.</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>➡ nobody owns the lead</li>
+                    <li>➡ nobody updates status</li>
+                  </ul>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">3. Manual follow-up reminders</h3>
+                  <p>Sales team remembers follow-ups based on:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>notes</li>
+                    <li>emails</li>
+                    <li>memory</li>
+                  </ul>
+                  <p>That means high chance of missing follow-ups.</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">4. No visibility of pending deals</h3>
+                  <p>Management has no idea:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>what stage leads are at</li>
+                    <li>who followed-up</li>
+                    <li>who didn't</li>
+                    <li>what is the expected closing value</li>
+                  </ul>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">🎯 CRM Provides End-to-End Lead Traceability</h2>
+                  <p>CRM ensures every enquiry becomes a trackable sales opportunity. Here's how:</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">1. All Leads in One System</h3>
+                  <p>CRM captures leads automatically from:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>website forms</li>
+                    <li>WhatsApp</li>
+                    <li>email</li>
+                    <li>chat</li>
+                    <li>campaigns</li>
+                    <li>ads</li>
+                    <li>social media</li>
+                  </ul>
+                  <p className="text-primary font-semibold">➡ No manual entry ➡ No missed leads</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">2. Lead Assignment Rules</h3>
+                  <p>Auto assign leads based on:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>location</li>
+                    <li>product interest</li>
+                    <li>sales region</li>
+                    <li>source</li>
+                    <li>sales availability</li>
+                  </ul>
+                  <p className="text-primary font-semibold">➡ Each lead has an owner</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">3. Automated Follow-up Reminders</h3>
+                  <p>CRM sends:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>reminders</li>
+                    <li>tasks</li>
+                    <li>follow-up notifications</li>
+                  </ul>
+                  <p className="text-primary font-semibold">➡ No follow-up skipped ➡ No manual tracking</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">4. Real-Time Lead Status</h3>
+                  <p>See every detail:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>contacted or not</li>
+                    <li>proposal sent</li>
+                    <li>follow-up done</li>
+                    <li>next call date</li>
+                    <li>probability of winning</li>
+                  </ul>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">5. Sales Pipeline Visibility</h3>
+                  <p>CRM dashboard shows:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>open leads</li>
+                    <li>lost leads</li>
+                    <li>conversion %</li>
+                    <li>deal stage</li>
+                    <li>pending actions</li>
+                  </ul>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">🆚 Before CRM vs After CRM</h2>
+                  <div className="overflow-x-auto my-8">
+                    <table className="min-w-full border-collapse border border-border">
+                      <thead className="bg-muted">
+                        <tr>
+                          <th className="border border-border px-4 py-2 text-left">Area</th>
+                          <th className="border border-border px-4 py-2 text-left">Before CRM</th>
+                          <th className="border border-border px-4 py-2 text-left">After CRM</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td className="border border-border px-4 py-2">Lead visibility</td><td className="border border-border px-4 py-2 text-destructive">Unknown</td><td className="border border-border px-4 py-2 text-primary">Fully traceable</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Follow-ups</td><td className="border border-border px-4 py-2 text-destructive">Manual</td><td className="border border-border px-4 py-2 text-primary">Automated</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Ownership</td><td className="border border-border px-4 py-2 text-destructive">Missing</td><td className="border border-border px-4 py-2 text-primary">Assigned</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Pipeline status</td><td className="border border-border px-4 py-2 text-destructive">Not visible</td><td className="border border-border px-4 py-2 text-primary">Fully visible</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Customer data</td><td className="border border-border px-4 py-2 text-destructive">Scattered</td><td className="border border-border px-4 py-2 text-primary">Centralized</td></tr>
+                        <tr><td className="border border-border px-4 py-2 font-semibold">Conversion Rate</td><td className="border border-border px-4 py-2 text-destructive font-semibold">Low</td><td className="border border-border px-4 py-2 text-primary font-semibold">30–45% higher</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">📦 Example CRM Sales Workflow</h2>
+                  <div className="overflow-x-auto my-8">
+                    <table className="min-w-full border-collapse border border-border">
+                      <thead className="bg-muted">
+                        <tr>
+                          <th className="border border-border px-4 py-2 text-left">Stage</th>
+                          <th className="border border-border px-4 py-2 text-left">CRM Action</th>
+                          <th className="border border-border px-4 py-2 text-left">Result</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td className="border border-border px-4 py-2">Lead Capture</td><td className="border border-border px-4 py-2">Auto create in CRM</td><td className="border border-border px-4 py-2 text-primary">No missing leads</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Assignment</td><td className="border border-border px-4 py-2">Allocate owner</td><td className="border border-border px-4 py-2 text-primary">Responsibility fixed</td></tr>
+                        <tr><td className="border border-border px-4 py-2">First Contact</td><td className="border border-border px-4 py-2">Call/email/WhatsApp</td><td className="border border-border px-4 py-2 text-primary">Instant action</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Follow-up Scheduling</td><td className="border border-border px-4 py-2">Auto reminders</td><td className="border border-border px-4 py-2 text-primary">No delay</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Requirement Analysis</td><td className="border border-border px-4 py-2">Capture needs</td><td className="border border-border px-4 py-2 text-primary">Personalized offer</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Proposal</td><td className="border border-border px-4 py-2">Auto generated</td><td className="border border-border px-4 py-2 text-primary">Faster quotation</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Negotiation</td><td className="border border-border px-4 py-2">Record notes</td><td className="border border-border px-4 py-2 text-primary">Better control</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Close Lost / Won</td><td className="border border-border px-4 py-2">Final update</td><td className="border border-border px-4 py-2 text-primary">Sales insight</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Reports & Analytics</td><td className="border border-border px-4 py-2">Pipeline dashboard</td><td className="border border-border px-4 py-2 text-primary">Management visibility</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">🔥 Real Business Benefits</h2>
+                  <p>After implementing CRM businesses usually see:</p>
+                  <ul className="space-y-2 text-primary font-semibold">
+                    <li>✔ 100% lead accountability</li>
+                    <li>✔ 40% faster response time</li>
+                    <li>✔ 30–45% increase in conversion rate</li>
+                    <li>✔ 60% reduction in lost leads</li>
+                    <li>✔ complete follow-up visibility</li>
+                  </ul>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">📌 Final Takeaway</h2>
+                  <p>Most businesses don't need "more leads" — they need better tracking of existing leads.</p>
+                  <p>CRM helps you:</p>
+                  <ul className="space-y-2 text-primary font-semibold">
+                    <li>✔ track every enquiry</li>
+                    <li>✔ follow-up on time</li>
+                    <li>✔ manage sales pipeline</li>
+                    <li>✔ increase conversions</li>
+                    <li>✔ close deals faster</li>
+                  </ul>
+                  <p className="font-semibold mt-4">Your leads are valuable — don't lose them because of manual tracking.</p>
+                </>
+              ) : currentPost.slug === "inaccurate-production-planning-erp-manufacturing-bottlenecks" ? (
+                <>
+                  <p>When planning relies on Excel sheets, human judgment, and disconnected data, production managers have no real-time visibility into:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>Raw material stock</li>
+                    <li>Machine availability</li>
+                    <li>WIP status</li>
+                    <li>Production schedule</li>
+                    <li>Customer demand</li>
+                    <li>Supplier lead times</li>
+                  </ul>
+                  <p className="font-semibold">This results in bottlenecks throughout the manufacturing chain.</p>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">❗ Pain Points of Manual Production Planning</h2>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">1. Frequent Material Shortages</h3>
+                  <p>Planners don't know what materials are available in real-time.</p>
+                  <p className="text-destructive font-semibold">➡ Result: production stops midway.</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">2. Overproduction or Underproduction</h3>
+                  <p>Demand forecasting + inventory mismatch leads to:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>unsold inventory piling up</li>
+                    <li>delayed order deliveries</li>
+                  </ul>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">3. No Real-Time Visibility of Resources</h3>
+                  <p>Machine & workforce allocation is guess-based.</p>
+                  <ul className="space-y-2 text-destructive">
+                    <li>➡ Idle machines</li>
+                    <li>➡ Worker overload</li>
+                    <li>➡ Bottlenecks in assembly line</li>
+                  </ul>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">4. Delayed Delivery Commitments</h3>
+                  <p>Without accurate planning, delivery dates are decided blindly.</p>
+                  <ul className="space-y-2 text-destructive">
+                    <li>➡ customer dissatisfaction</li>
+                    <li>➡ sales loss</li>
+                    <li>➡ penalty charges (especially in B2B)</li>
+                  </ul>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">5. Too Much Firefighting</h3>
+                  <p>Production managers keep reacting instead of planning:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>jumping urgent orders</li>
+                    <li>last-minute purchase</li>
+                    <li>rescheduling</li>
+                    <li>labor reassignments</li>
+                  </ul>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">🎯 How ERP Eliminates Production Bottlenecks</h2>
+                  <p>Modern ERP gives complete production visibility from end to end.</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">🔥 1. Material Requirement Planning (MRP)</h3>
+                  <p>The ERP automatically checks:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>✔ BOM</li>
+                    <li>✔ Stock</li>
+                    <li>✔ Lead time</li>
+                    <li>✔ Demand</li>
+                    <li>✔ Reorder level</li>
+                  </ul>
+                  <p>And tells you exactly:</p>
+                  <ul className="space-y-2 text-primary font-semibold">
+                    <li>what material is needed</li>
+                    <li>how much quantity</li>
+                    <li>when to order</li>
+                  </ul>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">🔥 2. Automated Production Scheduling</h3>
+                  <p>ERP auto-calculates:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>machine availability</li>
+                    <li>job priority</li>
+                    <li>routing workflow</li>
+                    <li>resource capacity</li>
+                    <li>expected completion time</li>
+                  </ul>
+                  <p className="text-primary font-semibold">➡ no manual scheduling ➡ removes production conflicts</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">🔥 3. Real-time Inventory Synchronization</h3>
+                  <p>When inventory is synchronized with production:</p>
+                  <ul className="space-y-2 text-primary font-semibold">
+                    <li>shortages reduce</li>
+                    <li>excess stock reduces</li>
+                    <li>minimum inventory maintained</li>
+                  </ul>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">🔥 4. Accurate Demand Forecasting</h3>
+                  <p>ERP uses:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>historical demand</li>
+                    <li>current orders</li>
+                    <li>seasonal trends</li>
+                    <li>reorder history</li>
+                  </ul>
+                  <p>to predict upcoming demand.</p>
+                  <p className="text-primary font-semibold">➡ no overproduction ➡ optimum planning</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">🔥 5. Shop Floor Tracking</h3>
+                  <p>ERP tracks live manufacturing status:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>WIP quantity</li>
+                    <li>machine load</li>
+                    <li>operator performance</li>
+                    <li>scrap percentage</li>
+                    <li>completion time</li>
+                    <li>pending jobs</li>
+                  </ul>
+                  <p className="text-primary font-semibold">➡ Real-time delays are visible instantly</p>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">📦 Example ERP Production Workflow</h2>
+                  <div className="overflow-x-auto my-8">
+                    <table className="min-w-full border-collapse border border-border">
+                      <thead className="bg-muted">
+                        <tr>
+                          <th className="border border-border px-4 py-2 text-left">Stage</th>
+                          <th className="border border-border px-4 py-2 text-left">ERP Process</th>
+                          <th className="border border-border px-4 py-2 text-left">Result</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td className="border border-border px-4 py-2">Sales Order</td><td className="border border-border px-4 py-2">Demand generated</td><td className="border border-border px-4 py-2 text-primary">Trigger MRP</td></tr>
+                        <tr><td className="border border-border px-4 py-2">BOM Explosion</td><td className="border border-border px-4 py-2">ERP checks components</td><td className="border border-border px-4 py-2 text-primary">Calculates need</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Material Planning</td><td className="border border-border px-4 py-2">Purchase auto triggered</td><td className="border border-border px-4 py-2 text-primary">Avoid shortage</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Routing Setup</td><td className="border border-border px-4 py-2">Operation sequence created</td><td className="border border-border px-4 py-2 text-primary">Standard workflow</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Production Scheduling</td><td className="border border-border px-4 py-2">Machine & resource assigned</td><td className="border border-border px-4 py-2 text-primary">Zero conflicts</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Shop Floor Execution</td><td className="border border-border px-4 py-2">Job cards issued</td><td className="border border-border px-4 py-2 text-primary">Live tracking</td></tr>
+                        <tr><td className="border border-border px-4 py-2">WIP Monitoring</td><td className="border border-border px-4 py-2">Material & labor tracked</td><td className="border border-border px-4 py-2 text-primary">Production accuracy</td></tr>
+                        <tr><td className="border border-border px-4 py-2">QC & Inspection</td><td className="border border-border px-4 py-2">Quality checked</td><td className="border border-border px-4 py-2 text-primary">Less rework</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Finished Goods</td><td className="border border-border px-4 py-2">Stock updated</td><td className="border border-border px-4 py-2 text-primary">Ready for dispatch</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">📊 Example Before vs After ERP</h2>
+                  <div className="overflow-x-auto my-8">
+                    <table className="min-w-full border-collapse border border-border">
+                      <thead className="bg-muted">
+                        <tr>
+                          <th className="border border-border px-4 py-2 text-left">Area</th>
+                          <th className="border border-border px-4 py-2 text-left">Before ERP</th>
+                          <th className="border border-border px-4 py-2 text-left">After ERP</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td className="border border-border px-4 py-2">Material availability</td><td className="border border-border px-4 py-2 text-destructive">Uncertain</td><td className="border border-border px-4 py-2 text-primary">Real-time</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Production planning</td><td className="border border-border px-4 py-2 text-destructive">Manual</td><td className="border border-border px-4 py-2 text-primary">Automated</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Scheduling</td><td className="border border-border px-4 py-2 text-destructive">Excel</td><td className="border border-border px-4 py-2 text-primary">Smart</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Delivery estimation</td><td className="border border-border px-4 py-2 text-destructive">Blind</td><td className="border border-border px-4 py-2 text-primary">Accurate</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Machine utilization</td><td className="border border-border px-4 py-2 text-destructive">Low</td><td className="border border-border px-4 py-2 text-primary">Optimized</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Customer delivery</td><td className="border border-border px-4 py-2 text-destructive">Delayed</td><td className="border border-border px-4 py-2 text-primary">On-time</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">💡 Business Results after ERP Implementation</h2>
+                  <p>Manufacturers usually report:</p>
+                  <ul className="space-y-2 text-primary font-semibold">
+                    <li>✔ 35% improvement in production efficiency</li>
+                    <li>✔ 25% faster order fulfillment</li>
+                    <li>✔ 40% fewer stock-outs</li>
+                    <li>✔ 30% reduction in overtime cost</li>
+                    <li>✔ 20% reduction in inventory holding cost</li>
+                  </ul>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">🎯 Conclusion</h2>
+                  <p>Inaccurate production planning is not a manufacturing problem—it is a visibility problem.</p>
+                  <p>ERP gives your business the clarity it needs:</p>
+                  <ul className="space-y-2 text-primary font-semibold">
+                    <li>✔ accurate BOM planning</li>
+                    <li>✔ real-time material control</li>
+                    <li>✔ automated scheduling</li>
+                    <li>✔ visibility across all processes</li>
+                  </ul>
+                  <p className="font-semibold mt-4">Result → Faster production + on-time delivery + lower operational cost.</p>
                 </>
               ) : (
                 <>
