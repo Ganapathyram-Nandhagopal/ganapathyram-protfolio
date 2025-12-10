@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -62,12 +62,20 @@ const blogPostsData = [
     slug: "manual-sales-followups-erp-crm-conversion-rate",
     title: "Manual Sales Follow-ups — How ERP CRM Increases Conversion Rate by 40%",
     category: "ERP & Business",
-    date: "Mar 28, 2025",
+    date: "Dec 12, 2025",
     readTime: "11 min read",
     image: blogManualSales,
     content: "Sales teams lose more business due to poor follow-ups than poor leads. Most companies focus on getting more enquiries but forget the most important part: Consistent follow-ups convert leads into revenue."
   }
 ];
+
+// Helper function to check if a date is in the future
+const isUpcoming = (dateStr: string): boolean => {
+  const postDate = new Date(dateStr);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return postDate > today;
+};
 
 interface Comment {
   id: string;
@@ -98,9 +106,17 @@ const BlogPost = () => {
   
   const currentPost = blogPostsData.find(post => post.slug === slug) || blogPostsData[0];
   
+  // Check if post is upcoming
+  const postIsUpcoming = isUpcoming(currentPost.date);
+  
   const relatedPosts = blogPostsData
     .filter(post => post.slug !== slug)
     .slice(0, 2);
+  
+  // Redirect to blog page if post is upcoming
+  if (postIsUpcoming) {
+    return <Navigate to="/blog.html" replace />;
+  }
 
   // Load comments from localStorage
   useEffect(() => {
