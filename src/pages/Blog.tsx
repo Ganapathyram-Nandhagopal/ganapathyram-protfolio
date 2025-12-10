@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Clock } from "lucide-react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -58,11 +59,19 @@ const blogPosts = [
     title: "Manual Sales Follow-ups — How ERP CRM Increases Conversion Rate by 40%",
     excerpt: "Discover how ERP-integrated CRM transforms sales follow-ups and dramatically improves conversion rates.",
     category: "ERP & Business",
-    date: "Mar 28, 2025",
+    date: "Dec 12, 2025",
     readTime: "11 min read",
     image: blogManualSales,
   },
 ];
+
+// Helper function to check if a date is in the future
+const isUpcoming = (dateStr: string): boolean => {
+  const postDate = new Date(dateStr);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return postDate > today;
+};
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
@@ -103,33 +112,47 @@ const Blog = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {filteredPosts.map((post, index) => (
-              <Link key={post.id} to={`/blog/${post.slug}`}>
-                <Card 
-                  className="group cursor-pointer hover-lift h-full border-0"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={post.image} 
-                      alt={post.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <CardContent className="p-6 space-y-4">
-                    <div className="flex items-center justify-between">
-                      <Badge variant="secondary">{post.category}</Badge>
-                      <span className="text-xs text-muted-foreground">{post.readTime}</span>
+            {filteredPosts.map((post, index) => {
+              const upcoming = isUpcoming(post.date);
+              const CardWrapper = upcoming ? 'div' : Link;
+              const cardProps = upcoming ? {} : { to: `/blog/${post.slug}` };
+              
+              return (
+                <CardWrapper key={post.id} {...cardProps as any}>
+                  <Card 
+                    className={`group h-full border-0 ${upcoming ? 'opacity-75' : 'cursor-pointer hover-lift'}`}
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <div className="relative h-48 overflow-hidden">
+                      <img 
+                        src={post.image} 
+                        alt={post.title}
+                        className={`w-full h-full object-cover transition-transform duration-500 ${upcoming ? 'grayscale' : 'group-hover:scale-105'}`}
+                      />
+                      {upcoming && (
+                        <div className="absolute inset-0 bg-background/60 flex items-center justify-center">
+                          <Badge variant="outline" className="bg-background/90 text-foreground border-primary gap-2">
+                            <Clock className="h-4 w-4" />
+                            Upcoming
+                          </Badge>
+                        </div>
+                      )}
                     </div>
-                    <h3 className="text-xl font-semibold group-hover:gradient-text transition-all">
-                      {post.title}
-                    </h3>
-                    <p className="text-muted-foreground line-clamp-2">{post.excerpt}</p>
-                    <p className="text-sm text-muted-foreground">{post.date}</p>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
+                    <CardContent className="p-6 space-y-4">
+                      <div className="flex items-center justify-between">
+                        <Badge variant="secondary">{post.category}</Badge>
+                        <span className="text-xs text-muted-foreground">{post.readTime}</span>
+                      </div>
+                      <h3 className={`text-xl font-semibold ${upcoming ? '' : 'group-hover:gradient-text'} transition-all`}>
+                        {post.title}
+                      </h3>
+                      <p className="text-muted-foreground line-clamp-2">{post.excerpt}</p>
+                      <p className="text-sm text-muted-foreground">{post.date}</p>
+                    </CardContent>
+                  </Card>
+                </CardWrapper>
+              );
+            })}
           </div>
         </div>
       </main>
