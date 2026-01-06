@@ -21,6 +21,7 @@ const blogPosts = [
     title: "Slow Follow-ups Are Killing Deals – CRM Automates Engagement",
     excerpt: "In today's sales world, customers expect instant communication. A delay of even 2 hours can make the customer select your competitor. Discover how CRM becomes a revenue growth engine.",
     category: "ERP & Business",
+    modules: ["CRM", "Sales"],
     date: "Apr 08, 2025",
     readTime: "10 min read",
     image: blogCrmSlowFollowups,
@@ -31,6 +32,7 @@ const blogPosts = [
     title: "Struggling with Cashflow? ERP Gives Real-Time Financial Control",
     excerpt: "Almost every business owner asks: Why do we have profit on paper but no money in the bank? ERP fixes this by giving real-time visibility, not end-of-month reports.",
     category: "ERP & Business",
+    modules: ["Accounting"],
     date: "Apr 10, 2025",
     readTime: "11 min read",
     image: blogErpCashflow,
@@ -41,6 +43,7 @@ const blogPosts = [
     title: "Losing Leads Every Week? CRM Brings Full Lead Traceability",
     excerpt: "Most companies lose 20% to 45% of leads every month simply because they are not tracked properly. Discover how CRM provides end-to-end lead traceability.",
     category: "ERP & Business",
+    modules: ["CRM", "Sales"],
     date: "Apr 02, 2025",
     readTime: "10 min read",
     image: blogCrmLeadTraceability,
@@ -51,6 +54,7 @@ const blogPosts = [
     title: "Inaccurate Production Planning — How ERP Solves Manufacturing Bottlenecks",
     excerpt: "Manufacturing businesses lose massive revenue every year because products are not produced on time. Learn how ERP eliminates production bottlenecks.",
     category: "ERP & Business",
+    modules: ["Manufacturing"],
     date: "Apr 05, 2025",
     readTime: "11 min read",
     image: blogProductionPlanning,
@@ -61,6 +65,7 @@ const blogPosts = [
     title: "Inventory Mismatch & Stock Losses — How ERP Brings 100% Stock Accuracy",
     excerpt: "Discover how ERP systems eliminate inventory mismatches and achieve near-perfect stock accuracy with real-world examples.",
     category: "ERP & Business",
+    modules: ["Inventory"],
     date: "Mar 20, 2025",
     readTime: "12 min read",
     image: blogInventoryMismatch,
@@ -71,6 +76,7 @@ const blogPosts = [
     title: "Delayed Purchase Approvals — How ERP Workflow Automation Speeds Up Procurement",
     excerpt: "Learn how ERP workflow automation eliminates approval bottlenecks and reduces procurement time by 70-80%.",
     category: "ERP & Business",
+    modules: ["Purchase"],
     date: "Mar 25, 2025",
     readTime: "10 min read",
     image: blogDelayedApprovals,
@@ -81,6 +87,7 @@ const blogPosts = [
     title: "Manual Sales Follow-ups — How ERP CRM Increases Conversion Rate by 40%",
     excerpt: "Discover how ERP-integrated CRM transforms sales follow-ups and dramatically improves conversion rates.",
     category: "ERP & Business",
+    modules: ["CRM", "Sales"],
     date: "Dec 12, 2025",
     readTime: "11 min read",
     image: blogManualSales,
@@ -95,14 +102,20 @@ const isUpcoming = (dateStr: string): boolean => {
   return postDate > today;
 };
 
+const allModules = ["Sales", "Purchase", "CRM", "Manufacturing", "Accounting", "Inventory"];
+
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [selectedModule, setSelectedModule] = useState<string>("All");
   
   const categories = ["All", ...Array.from(new Set(blogPosts.map(post => post.category)))];
+  const modules = ["All", ...allModules];
   
-  const filteredPosts = selectedCategory === "All" 
-    ? blogPosts 
-    : blogPosts.filter(post => post.category === selectedCategory);
+  const filteredPosts = blogPosts.filter(post => {
+    const categoryMatch = selectedCategory === "All" || post.category === selectedCategory;
+    const moduleMatch = selectedModule === "All" || post.modules.includes(selectedModule);
+    return categoryMatch && moduleMatch;
+  });
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -120,7 +133,7 @@ const Blog = () => {
           </div>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8 sm:mb-12">
+          <div className="flex flex-wrap justify-center gap-2 mb-4">
             {categories.map((category) => (
               <Button
                 key={category}
@@ -129,6 +142,21 @@ const Blog = () => {
                 className="transition-all"
               >
                 {category}
+              </Button>
+            ))}
+          </div>
+
+          {/* Module Filter */}
+          <div className="flex flex-wrap justify-center gap-2 mb-8 sm:mb-12">
+            {modules.map((module) => (
+              <Button
+                key={module}
+                variant={selectedModule === module ? "secondary" : "ghost"}
+                size="sm"
+                onClick={() => setSelectedModule(module)}
+                className="transition-all"
+              >
+                {module}
               </Button>
             ))}
           </div>
@@ -164,6 +192,13 @@ const Blog = () => {
                       <div className="flex items-center justify-between">
                         <Badge variant="secondary">{post.category}</Badge>
                         <span className="text-xs text-muted-foreground">{post.readTime}</span>
+                      </div>
+                      <div className="flex flex-wrap gap-1">
+                        {post.modules.map((module) => (
+                          <Badge key={module} variant="outline" className="text-xs">
+                            {module}
+                          </Badge>
+                        ))}
                       </div>
                       <h3 className={`text-xl font-semibold ${upcoming ? '' : 'group-hover:gradient-text'} transition-all`}>
                         {post.title}
