@@ -11,8 +11,30 @@ import blogDelayedApprovals from "@/assets/blog-delayed-approvals.png";
 import blogManualSales from "@/assets/blog-manual-sales.png";
 import blogCrmLeadTraceability from "@/assets/blog-crm-lead-traceability.png";
 import blogProductionPlanning from "@/assets/blog-production-planning.png";
+import blogCrmSlowFollowups from "@/assets/blog-crm-slow-followups.png";
+import blogErpCashflow from "@/assets/blog-erp-cashflow.png";
 
 const blogPosts = [
+  {
+    id: 12,
+    slug: "slow-followups-killing-deals-crm-automates-engagement",
+    title: "Slow Follow-ups Are Killing Deals – CRM Automates Engagement",
+    excerpt: "In today's sales world, customers expect instant communication. A delay of even 2 hours can make the customer select your competitor. Discover how CRM becomes a revenue growth engine.",
+    category: "ERP & Business",
+    date: "Apr 08, 2025",
+    readTime: "10 min read",
+    image: blogCrmSlowFollowups,
+  },
+  {
+    id: 13,
+    slug: "struggling-cashflow-erp-real-time-financial-control",
+    title: "Struggling with Cashflow? ERP Gives Real-Time Financial Control",
+    excerpt: "Almost every business owner asks: Why do we have profit on paper but no money in the bank? ERP fixes this by giving real-time visibility, not end-of-month reports.",
+    category: "ERP & Business",
+    date: "Apr 10, 2025",
+    readTime: "11 min read",
+    image: blogErpCashflow,
+  },
   {
     id: 10,
     slug: "losing-leads-crm-full-lead-traceability",
