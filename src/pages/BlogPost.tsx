@@ -14,9 +14,31 @@ import blogDelayedApprovals from "@/assets/blog-delayed-approvals.png";
 import blogManualSales from "@/assets/blog-manual-sales.png";
 import blogCrmLeadTraceability from "@/assets/blog-crm-lead-traceability.png";
 import blogProductionPlanning from "@/assets/blog-production-planning.png";
+import blogCrmSlowFollowups from "@/assets/blog-crm-slow-followups.png";
+import blogErpCashflow from "@/assets/blog-erp-cashflow.png";
 import signature from "@/assets/signature.png";
 
 const blogPostsData = [
+  {
+    id: "12",
+    slug: "slow-followups-killing-deals-crm-automates-engagement",
+    title: "Slow Follow-ups Are Killing Deals – CRM Automates Engagement",
+    category: "ERP & Business",
+    date: "Apr 08, 2025",
+    readTime: "10 min read",
+    image: blogCrmSlowFollowups,
+    content: "In today's sales world, customers expect instant communication. The moment they enquire – they want a reply now. But in most organizations, follow-ups depend on sales team memory, manual reminders, busy working hours, scattered notes, and WhatsApp messages."
+  },
+  {
+    id: "13",
+    slug: "struggling-cashflow-erp-real-time-financial-control",
+    title: "Struggling with Cashflow? ERP Gives Real-Time Financial Control",
+    category: "ERP & Business",
+    date: "Apr 10, 2025",
+    readTime: "11 min read",
+    image: blogErpCashflow,
+    content: "Almost every business owner asks the same question every month: Why do we have profit on paper but no money in the bank? This happens because accounting works after transactions, but cash flow issues appear during operations."
+  },
   {
     id: "10",
     slug: "losing-leads-crm-full-lead-traceability",
@@ -1564,6 +1586,246 @@ const BlogPost = () => {
                     <li>✔ visibility across all processes</li>
                   </ul>
                   <p className="font-semibold mt-4">Result → Faster production + on-time delivery + lower operational cost.</p>
+                </>
+              ) : currentPost.slug === "slow-followups-killing-deals-crm-automates-engagement" ? (
+                <>
+                  <p>
+                    A delay of even 2 hours can make the customer select your competitor. 
+                    Slow follow-ups are silent deal killers. This is where CRM becomes a revenue growth engine.
+                  </p>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">❗ What exactly causes slow follow-ups?</h2>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li><strong>✔ Sales rep is travelling</strong> — Customer enquiries come, but nobody responds instantly.</li>
+                    <li><strong>✔ Manual reminders</strong> — Salespeople forget follow-up dates.</li>
+                    <li><strong>✔ Leads scattered in Excel/WhatsApp</strong> — No central notification.</li>
+                    <li><strong>✔ No visibility of pending follow-ups</strong> — Sales manager assumes team is following-up – but actually not.</li>
+                    <li><strong>✔ Too many leads at peak time</strong> — When 20–30 enquiries arrive daily, manual follow-ups become impossible.</li>
+                  </ul>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">🤖 CRM Automates Follow-ups End-to-End</h2>
+                  <p>CRM doesn't just store leads; it continuously drives them.</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">1. Auto Capture</h3>
+                  <p>Whenever a lead comes from Website, Google ads, WhatsApp, Email, or Social — CRM captures automatically.</p>
+                  <p className="text-primary font-semibold">➡ No manual entry ➡ No lost leads</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">2. Auto Assign to Sales Executives</h3>
+                  <p>Based on territory, product, region, workload — every lead gets an owner immediately.</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">3. Auto Follow-Up Alerts</h3>
+                  <p>CRM sends: task reminders, emails, popups, calendar notifications</p>
+                  <p className="text-primary font-semibold">➡ No follow-up missed</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">4. Auto Email & WhatsApp Messages</h3>
+                  <p>Example messages:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>"Thanks for enquiry"</li>
+                    <li>"We will get back shortly"</li>
+                    <li>"Here is our brochure"</li>
+                    <li>"Shall we schedule a call tomorrow?"</li>
+                  </ul>
+                  <p className="text-primary font-semibold">➡ Customer gets engaged instantly</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">5. Auto Next-Action Scheduling</h3>
+                  <p>After every activity, CRM forces next step: call, meeting, quotation, negotiation</p>
+                  <p className="text-primary font-semibold">➡ No idle leads</p>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">🆚 Before CRM vs After CRM</h2>
+                  <div className="overflow-x-auto my-8">
+                    <table className="min-w-full border-collapse border border-border">
+                      <thead className="bg-muted">
+                        <tr>
+                          <th className="border border-border px-4 py-2 text-left">Area</th>
+                          <th className="border border-border px-4 py-2 text-left">Before CRM</th>
+                          <th className="border border-border px-4 py-2 text-left">After CRM</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td className="border border-border px-4 py-2">Lead capture</td><td className="border border-border px-4 py-2 text-destructive">Manual</td><td className="border border-border px-4 py-2 text-primary">Automatic</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Follow-up</td><td className="border border-border px-4 py-2 text-destructive">Depends on memory</td><td className="border border-border px-4 py-2 text-primary">System driven</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Response time</td><td className="border border-border px-4 py-2 text-destructive">Delays</td><td className="border border-border px-4 py-2 text-primary">Instant</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Communication</td><td className="border border-border px-4 py-2 text-destructive">Manual</td><td className="border border-border px-4 py-2 text-primary">Automated</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Lost leads</td><td className="border border-border px-4 py-2 text-destructive">Very high</td><td className="border border-border px-4 py-2 text-primary">Almost zero</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Customer interest</td><td className="border border-border px-4 py-2 text-destructive">Low</td><td className="border border-border px-4 py-2 text-primary">Active</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">⚙ Real CRM Follow-Up Automation Example</h2>
+                  <div className="overflow-x-auto my-8">
+                    <table className="min-w-full border-collapse border border-border">
+                      <thead className="bg-muted">
+                        <tr>
+                          <th className="border border-border px-4 py-2 text-left">Trigger</th>
+                          <th className="border border-border px-4 py-2 text-left">CRM Action</th>
+                          <th className="border border-border px-4 py-2 text-left">Customer Experience</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td className="border border-border px-4 py-2">New enquiry received</td><td className="border border-border px-4 py-2">Send email + assign sales rep</td><td className="border border-border px-4 py-2 text-primary">Instant response</td></tr>
+                        <tr><td className="border border-border px-4 py-2">After 1 hour</td><td className="border border-border px-4 py-2">Automated WhatsApp intro</td><td className="border border-border px-4 py-2 text-primary">Customers feel attended</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Sales rep free</td><td className="border border-border px-4 py-2">Call task auto assigned</td><td className="border border-border px-4 py-2 text-primary">Timely follow-up</td></tr>
+                        <tr><td className="border border-border px-4 py-2">No reply from customer</td><td className="border border-border px-4 py-2">Auto reminder next day</td><td className="border border-border px-4 py-2 text-primary">No lost conversation</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Lead still cold</td><td className="border border-border px-4 py-2">Auto send product brochure</td><td className="border border-border px-4 py-2 text-primary">Engagement continues</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">🔥 Result</h2>
+                  <p>Companies using CRM automation see:</p>
+                  <ul className="space-y-2 text-primary font-semibold">
+                    <li>✔ 60% improvement in response time</li>
+                    <li>✔ 35–50% more engaged leads</li>
+                    <li>✔ 20–40% higher conversion</li>
+                    <li>✔ 100% traceability</li>
+                    <li>✔ Zero "forgot to follow-up" excuses</li>
+                  </ul>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">📋 Real Example With CRM Activity Table</h2>
+                  <div className="overflow-x-auto my-8">
+                    <table className="min-w-full border-collapse border border-border">
+                      <thead className="bg-muted">
+                        <tr>
+                          <th className="border border-border px-4 py-2 text-left">Time</th>
+                          <th className="border border-border px-4 py-2 text-left">CRM Action</th>
+                          <th className="border border-border px-4 py-2 text-left">Message Sent</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td className="border border-border px-4 py-2">10:00 AM</td><td className="border border-border px-4 py-2">Lead comes</td><td className="border border-border px-4 py-2">Auto email: Welcome! We received your enquiry</td></tr>
+                        <tr><td className="border border-border px-4 py-2">10:05 AM</td><td className="border border-border px-4 py-2">Auto assign</td><td className="border border-border px-4 py-2">"Assigned to Sales Executive Raj"</td></tr>
+                        <tr><td className="border border-border px-4 py-2">10:10 AM</td><td className="border border-border px-4 py-2">Auto WhatsApp</td><td className="border border-border px-4 py-2">Our sales expert will call shortly</td></tr>
+                        <tr><td className="border border-border px-4 py-2">12:00 PM</td><td className="border border-border px-4 py-2">Sales rep task</td><td className="border border-border px-4 py-2">Call scheduled</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Next day</td><td className="border border-border px-4 py-2">Auto reminder</td><td className="border border-border px-4 py-2">"Follow up with customer"</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="text-primary font-semibold">Every step is automated — customer never feels ignored.</p>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">🎯 Conclusion</h2>
+                  <p>In today's competitive market, speed wins. CRM automation ensures:</p>
+                  <ul className="space-y-2 text-primary font-semibold">
+                    <li>✔ Instant lead capture</li>
+                    <li>✔ Automated follow-ups</li>
+                    <li>✔ No missed opportunities</li>
+                    <li>✔ Higher conversion rates</li>
+                  </ul>
+                  <p className="font-semibold mt-4">Stop losing deals to slow follow-ups. Let CRM automate your engagement.</p>
+                </>
+              ) : currentPost.slug === "struggling-cashflow-erp-real-time-financial-control" ? (
+                <>
+                  <p>
+                    You might be profitable—but still face cash shortage due to: delayed customer payments, 
+                    uncontrolled purchases, sudden expenses, wrong credit terms, inventory blocking money, 
+                    and pending vendor settlements. ERP fixes this by giving real-time visibility, not end-of-month reports.
+                  </p>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">❗ Why businesses lose cash without knowing?</h2>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li><strong>1. No real-time receivable tracking</strong> — Customers delay payments for weeks and nobody actually follows-up.</li>
+                    <li><strong>2. No visibility on vendor liabilities</strong> — Payments due suddenly appear when vendor calls.</li>
+                    <li><strong>3. Sales team gives discounts without approval</strong> — Profit reduces silently.</li>
+                    <li><strong>4. Inventory purchases done without stock insight</strong> — Money gets blocked in excess stock.</li>
+                    <li><strong>5. Expenses are recorded late</strong> — By the time accounting sees it—money is already gone.</li>
+                  </ul>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">💡 ERP Brings Real-Time Cash Flow Awareness</h2>
+                  <p>ERP brings financial control at each operational point, not after accounting.</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">1. Customer Overdue Alerts</h3>
+                  <p>Automatically shows: which client owes money, how many days overdue, penalty/interest, total pending</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">2. Credit Limit Controls</h3>
+                  <p>System blocks new orders if customer credit exceeds threshold.</p>
+                  <p className="text-primary font-semibold">➡ No risky sales ➡ Less financial exposure</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">3. Purchase Approval Based on Budget</h3>
+                  <p>Purchase request checks: budget available, stock available, expected sales</p>
+                  <p className="text-primary font-semibold">➡ No unnecessary purchase ➡ No blocked inventory</p>
+
+                  <h3 className="font-sans text-2xl font-bold mt-8">4. Automated AP & AR</h3>
+                  <p>ERP maintains: receivable aging, vendor aging, outstanding reports, recurrences — Everything calculated LIVE.</p>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">📊 Before ERP vs After ERP</h2>
+                  <div className="overflow-x-auto my-8">
+                    <table className="min-w-full border-collapse border border-border">
+                      <thead className="bg-muted">
+                        <tr>
+                          <th className="border border-border px-4 py-2 text-left">Area</th>
+                          <th className="border border-border px-4 py-2 text-left">Before ERP</th>
+                          <th className="border border-border px-4 py-2 text-left">After ERP</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td className="border border-border px-4 py-2">Receivables</td><td className="border border-border px-4 py-2 text-destructive">Unknown</td><td className="border border-border px-4 py-2 text-primary">Live visibility</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Vendor dues</td><td className="border border-border px-4 py-2 text-destructive">Surprise notification</td><td className="border border-border px-4 py-2 text-primary">Planned</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Expenses</td><td className="border border-border px-4 py-2 text-destructive">Late entry</td><td className="border border-border px-4 py-2 text-primary">Live capture</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Purchases</td><td className="border border-border px-4 py-2 text-destructive">Overspending</td><td className="border border-border px-4 py-2 text-primary">Controlled</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Cashflow</td><td className="border border-border px-4 py-2 text-destructive">Monthly view</td><td className="border border-border px-4 py-2 text-primary">Real-time</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Working capital</td><td className="border border-border px-4 py-2 text-destructive">Struggle</td><td className="border border-border px-4 py-2 text-primary">Predictable</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">🧠 Real Example</h2>
+                  <p><strong>🎯 Problem:</strong> Company has ₹50 Lakh sales but only ₹10 Lakh bank balance.</p>
+                  <p>Why? Because:</p>
+                  <div className="overflow-x-auto my-8">
+                    <table className="min-w-full border-collapse border border-border">
+                      <thead className="bg-muted">
+                        <tr>
+                          <th className="border border-border px-4 py-2 text-left">Component</th>
+                          <th className="border border-border px-4 py-2 text-left">Value</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td className="border border-border px-4 py-2">Receivables</td><td className="border border-border px-4 py-2">₹25 Lakh</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Inventory blocked</td><td className="border border-border px-4 py-2">₹10 Lakh</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Vendor Due</td><td className="border border-border px-4 py-2">₹5 Lakh</td></tr>
+                        <tr><td className="border border-border px-4 py-2 font-semibold">Actual cash available</td><td className="border border-border px-4 py-2 font-semibold">Only ₹10 Lakh</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">🔧 ERP Live Dashboard Example</h2>
+                  <div className="overflow-x-auto my-8">
+                    <table className="min-w-full border-collapse border border-border">
+                      <thead className="bg-muted">
+                        <tr>
+                          <th className="border border-border px-4 py-2 text-left">Area</th>
+                          <th className="border border-border px-4 py-2 text-left">Value</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td className="border border-border px-4 py-2">Sales this month</td><td className="border border-border px-4 py-2">₹50,00,000</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Customer Outstanding</td><td className="border border-border px-4 py-2">₹25,00,000</td></tr>
+                        <tr><td className="border border-border px-4 py-2 text-destructive">Overdue {'>'} 30 days</td><td className="border border-border px-4 py-2 text-destructive">₹8,00,000</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Vendor Payment Due</td><td className="border border-border px-4 py-2">₹5,00,000</td></tr>
+                        <tr><td className="border border-border px-4 py-2 text-primary">Available Bank Balance</td><td className="border border-border px-4 py-2 text-primary">₹10,00,000</td></tr>
+                        <tr><td className="border border-border px-4 py-2">Purchase Budget Remaining</td><td className="border border-border px-4 py-2">₹6,50,000</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p>So decision making becomes:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>→ Stop giving credit to overdue customers</li>
+                    <li>→ Reduce purchases this month</li>
+                    <li>→ Push follow-ups</li>
+                    <li>→ Delay vendor payments strategically</li>
+                  </ul>
+
+                  <h2 className="font-sans text-3xl font-bold mt-12">💥 Final Takeaway</h2>
+                  <p>Most businesses don't have cash flow issues—they simply lack real-time financial visibility.</p>
+                  <p>ERP prevents cash blockage by:</p>
+                  <ul className="space-y-2 text-primary font-semibold">
+                    <li>✔ Controlling spending</li>
+                    <li>✔ Monitoring receivables</li>
+                    <li>✔ Aligning purchases</li>
+                    <li>✔ Enforcing credit rules</li>
+                    <li>✔ Giving live dashboards</li>
+                  </ul>
+                  <p className="font-semibold mt-4">Cashflow isn't accounting — it's operational control. And ERP gives you that control every minute.</p>
                 </>
               ) : (
                 <>
