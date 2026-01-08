@@ -32,7 +32,7 @@ const Hero = () => {
           </Button>
         </div>
         
-        <div className="pt-4">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
           <Button 
             size="lg" 
             variant="premium"
@@ -41,6 +41,17 @@ const Hero = () => {
           >
             Portfolio Sections
             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+          </Button>
+          <Button 
+            size="lg" 
+            variant="outline"
+            className="group"
+            asChild
+          >
+            <Link to="/services.html">
+              View My Services
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Link>
           </Button>
         </div>
       </div>
