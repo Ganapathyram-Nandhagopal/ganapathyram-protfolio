@@ -1,53 +1,102 @@
 import { Card, CardContent } from "@/components/ui/card";
-import projectEcommerce from "@/assets/project-ecommerce.jpg";
-import projectBanking from "@/assets/project-banking.jpg";
-import projectDashboard from "@/assets/project-dashboard.jpg";
-import projectFitness from "@/assets/project-fitness.jpg";
-import projectMusic from "@/assets/project-music.jpg";
-import projectTravel from "@/assets/project-travel.jpg";
+import { Badge } from "@/components/ui/badge";
+import { Factory, FileText, Settings, Users, TrendingUp, Briefcase } from "lucide-react";
 
-const projects = [
+const portfolioSections = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    category: "Web Design",
-    description: "A modern shopping experience with seamless checkout flow",
-    image: projectEcommerce,
+    category: "ERP Implementation Projects",
+    icon: Factory,
+    items: [
+      {
+        title: "Manufacturing ERP Implementation",
+        description: "End-to-end functional implementation covering BOM, routing, production planning, and cost tracking.",
+      },
+      {
+        title: "Trading & Distribution ERP",
+        description: "Streamlined local and export sales with inventory, procurement, and financial integration.",
+      },
+      {
+        title: "Project-Based ERP (Contracting & Fabrication)",
+        description: "Managed project budgets, WBS, milestone billing, and revenue recognition.",
+      },
+    ],
   },
   {
     id: 2,
-    title: "Banking Mobile App",
-    category: "App Design",
-    description: "Secure and intuitive financial management on the go",
-    image: projectBanking,
+    category: "Business Analysis & Process Design",
+    icon: TrendingUp,
+    items: [
+      {
+        title: "Sales & Order Management Workflow Design",
+        description: "Requirement analysis and process mapping from RFQ to invoicing and collections.",
+      },
+      {
+        title: "Procurement & Inventory Optimization",
+        description: "Designed procure-to-pay workflows with approvals, GRN, and stock valuation controls.",
+      },
+      {
+        title: "Finance & Accounting Integration",
+        description: "Mapped GL, AP, AR, tax, and cost centers across ERP modules.",
+      },
+    ],
   },
   {
     id: 3,
-    title: "SaaS Dashboard",
-    category: "UI/UX Design",
-    description: "Data visualization that tells a compelling story",
-    image: projectDashboard,
+    category: "Functional Documentation & SOPs",
+    icon: FileText,
+    items: [
+      {
+        title: "ERP Functional Specifications (FSD & BRD)",
+        description: "Prepared detailed BRD, FSD, and gap-fit analysis for ERP customization.",
+      },
+      {
+        title: "Standard Operating Procedures (SOPs)",
+        description: "Created role-based SOPs for Sales, Purchase, Inventory, Manufacturing, and Finance teams.",
+      },
+      {
+        title: "User Training & Manuals",
+        description: "Developed end-user guides and conducted functional training sessions.",
+      },
+    ],
   },
   {
     id: 4,
-    title: "Fitness Tracker",
-    category: "Product Design",
-    description: "Motivating users to achieve their health goals",
-    image: projectFitness,
+    category: "ERP Customization & Integration",
+    icon: Settings,
+    items: [
+      {
+        title: "OFBiz Custom Module Design",
+        description: "Defined functional logic for sales invoices, encumbrance orders, and helpdesk workflows.",
+      },
+      {
+        title: "ERP Reports & Dashboards",
+        description: "Functional design of MIS, operational, and statutory reports.",
+      },
+      {
+        title: "Third-Party Integrations",
+        description: "Payment gateways, e-Invoicing, LC & export documentation integration.",
+      },
+    ],
   },
   {
     id: 5,
-    title: "Music Streaming",
-    category: "Web Design",
-    description: "Immersive audio experience with smart recommendations",
-    image: projectMusic,
-  },
-  {
-    id: 6,
-    title: "Travel Booking",
-    category: "App Design",
-    description: "Simplifying the journey from dream to destination",
-    image: projectTravel,
+    category: "Project & Delivery Leadership",
+    icon: Users,
+    items: [
+      {
+        title: "ERP Implementation Project Lead",
+        description: "Led cross-functional teams, managed timelines, risks, and stakeholder communication.",
+      },
+      {
+        title: "Gap Analysis & Change Management",
+        description: "Handled change requests, UAT coordination, and go-live support.",
+      },
+      {
+        title: "Post-Go-Live Support & Optimization",
+        description: "Continuous improvement through process optimization and user feedback.",
+      },
+    ],
   },
 ];
 
@@ -56,33 +105,49 @@ const Projects = () => {
     <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16 space-y-4 animate-fade-in">
+          <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-bold">
+            Portfolio <span className="gradient-text">Sections</span>
+          </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-            A collection of projects that showcase design excellence and user-centered thinking
+            ERP Functional Consultant / Business Analyst expertise across implementation, analysis, and project delivery
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {projects.map((project, index) => (
-            <Card 
-              key={project.id}
-              className="group cursor-pointer hover-lift border-0 overflow-hidden animate-slide-up"
-              style={{ animationDelay: `${index * 100}ms` }}
+        <div className="space-y-8 sm:space-y-12">
+          {portfolioSections.map((section, sectionIndex) => (
+            <div 
+              key={section.id}
+              className="animate-slide-up"
+              style={{ animationDelay: `${sectionIndex * 100}ms` }}
             >
-              <div className="relative h-64 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 rounded-lg bg-primary/10">
+                  <section.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold">{section.category}</h3>
               </div>
-              <CardContent className="p-6 space-y-2">
-                <p className="text-sm text-muted-foreground uppercase tracking-wider">
-                  {project.category}
-                </p>
-                <h3 className="text-2xl font-semibold">{project.title}</h3>
-                <p className="text-muted-foreground">{project.description}</p>
-              </CardContent>
-            </Card>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                {section.items.map((item, itemIndex) => (
+                  <Card 
+                    key={itemIndex}
+                    className="group hover-lift border bg-card/50 backdrop-blur-sm hover:bg-card transition-all duration-300"
+                  >
+                    <CardContent className="p-5 sm:p-6 space-y-3">
+                      <Badge variant="secondary" className="text-xs">
+                        {section.category.split(' ')[0]}
+                      </Badge>
+                      <h4 className="text-lg font-semibold leading-tight group-hover:text-primary transition-colors">
+                        {item.title}
+                      </h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {item.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </div>
