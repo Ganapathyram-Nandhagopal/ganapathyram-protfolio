@@ -37,12 +37,10 @@ const Hero = () => {
             size="lg" 
             variant="premium"
             className="group"
-            asChild
+            onClick={() => document.getElementById('portfolio-sections')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            <Link to="/services.html">
-              View My Services
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Link>
+            Portfolio Sections
+            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Button>
         </div>
       </div>
