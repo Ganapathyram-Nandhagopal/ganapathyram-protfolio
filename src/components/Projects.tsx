@@ -65,7 +65,7 @@ const Projects = () => {
   const currentSection = portfolioSections[activeSection];
 
   return (
-    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 lg:px-24">
+    <section id="portfolio-sections" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 lg:px-24">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 animate-fade-in">
