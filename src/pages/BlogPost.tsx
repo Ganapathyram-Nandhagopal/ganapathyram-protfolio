@@ -14,8 +14,8 @@ import blogDelayedApprovals from "@/assets/blog-delayed-approvals.png";
 import blogManualSales from "@/assets/blog-manual-sales.png";
 import blogCrmLeadTraceability from "@/assets/blog-crm-lead-traceability.png";
 import blogProductionPlanning from "@/assets/blog-production-planning.png";
-import blogCrmSlowFollowups from "@/assets/blog-crm-slow-followups.png";
-import blogErpCashflow from "@/assets/blog-erp-cashflow.png";
+import blogCrmSlowFollowups from "@/assets/blog-crm-slow-followups-new.png";
+import blogErpCashflow from "@/assets/blog-erp-cashflow-new.png";
 import signature from "@/assets/signature.png";
 
 const blogPostsData = [
