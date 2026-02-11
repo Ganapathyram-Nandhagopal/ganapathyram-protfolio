@@ -1,43 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-
-const rotatingWords = ["Strategy", "Vision", "Plan"];
 
 const Hero = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setCurrentIndex((prev) => (prev + 1) % rotatingWords.length);
-        setIsAnimating(false);
-      }, 400);
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-12 lg:px-24 pt-20">
       <div className="max-w-5xl w-full text-center space-y-6 sm:space-y-8 animate-fade-in">
         <div className="space-y-2">
-          <h1 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+          <h1 className="font-sans text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-tight">
             Shaping{" "}
-            <span className="gradient-text">Business</span>{" "}
-            <span className="inline-block overflow-hidden h-[1.2em] align-bottom">
-              <span
-                className={`inline-block transition-all duration-400 ease-in-out ${
-                  isAnimating
-                    ? "translate-y-full opacity-0"
-                    : "translate-y-0 opacity-100"
-                }`}
-              >
-                {rotatingWords[currentIndex]}
-              </span>
-            </span>
+            <span className="gradient-text">Business</span>
+            <br />
+            Strategy
           </h1>
         </div>
         
