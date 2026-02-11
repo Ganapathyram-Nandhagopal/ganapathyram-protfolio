@@ -26,8 +26,7 @@ const Hero = () => {
         <div className="space-y-2">
           <h1 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
             Shaping{" "}
-            <span className="gradient-text">Business</span>
-            <br />
+            <span className="gradient-text">Business</span>{" "}
             <span className="inline-block overflow-hidden h-[1.2em] align-bottom">
               <span
                 className={`inline-block transition-all duration-400 ease-in-out ${
