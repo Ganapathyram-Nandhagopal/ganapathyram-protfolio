@@ -3,7 +3,7 @@ import { ArrowRight, Mail, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const rotatingWords = ["Strategy", "Vision", "Roadmap", "Plan"];
+const rotatingWords = ["Strategy", "Vision", "Plan"];
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
