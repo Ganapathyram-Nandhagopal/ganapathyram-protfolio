@@ -125,3 +125,67 @@ All colors MUST be HSL.
     transform: translateY(0);
   }
 }
+
+/* Social Button Animation */
+.social-btn-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  width: 240px;
+  height: 72px;
+  background-color: hsl(var(--secondary));
+  border-radius: 80px;
+  padding: 0 18px;
+  will-change: transform;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-btn-wrap:hover {
+  transform: scale(1.1);
+}
+
+.social-btn-label {
+  position: absolute;
+  z-index: 10;
+  width: 240px;
+  height: 72px;
+  border-radius: 80px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 72px;
+  letter-spacing: 2px;
+  color: hsl(var(--primary-foreground));
+  background-color: hsl(var(--foreground));
+  padding: 0 18px;
+  transition: all 1.2s ease;
+}
+
+.social-btn-wrap:hover .social-btn-label {
+  transition-delay: 0.25s;
+  transform: translateX(-280px);
+}
+
+.social-btn-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 240px;
+  height: 64px;
+  border-radius: 80px;
+}
+
+.social-icon-item {
+  opacity: 0;
+  color: hsl(var(--foreground));
+  will-change: transform;
+  transform: scale(0.1);
+  transition: all 0.3s ease;
+}
+
+.social-btn-wrap:hover .social-icon-item {
+  opacity: 1;
+  transform: scale(1);
+}
