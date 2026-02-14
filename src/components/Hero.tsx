@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail, Linkedin } from "lucide-react";
+import { ArrowRight, Mail, Linkedin, Instagram, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -18,17 +18,24 @@ const Hero = () => {
           A business minded ERP Consultant and Analyst passionate about transforming complex business challenges into seamless, technology-driven solutions that improve performance and profitability.
         </p>
 
-        <div className="flex justify-center gap-4 pt-2">
-          <Button variant="outline" size="icon" className="rounded-full" asChild>
-            <a href="mailto:your.email@example.com" aria-label="Email">
-              <Mail className="h-5 w-5" />
-            </a>
-          </Button>
-          <Button variant="outline" size="icon" className="rounded-full" asChild>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <Linkedin className="h-5 w-5" />
-            </a>
-          </Button>
+        <div className="flex justify-center pt-2">
+          <div className="social-btn-wrap group">
+            <span className="social-btn-label">Social</span>
+            <div className="social-btn-icons">
+              <a href="mailto:ganapathyram.n@gmail.com" aria-label="Email" className="social-icon-item" style={{ transitionDelay: '1.1s' }}>
+                <Mail className="h-6 w-6" />
+              </a>
+              <a href="https://www.linkedin.com/in/ganapathyramnandhagopal/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="social-icon-item" style={{ transitionDelay: '0.9s' }}>
+                <Linkedin className="h-6 w-6" />
+              </a>
+              <a href="https://www.instagram.com/kavin.117/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="social-icon-item" style={{ transitionDelay: '0.7s' }}>
+                <Instagram className="h-6 w-6" />
+              </a>
+              <a href="tel:+916383236424" aria-label="Phone" className="social-icon-item" style={{ transitionDelay: '0.4s' }}>
+                <Phone className="h-6 w-6" />
+              </a>
+            </div>
+          </div>
         </div>
         
         <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
